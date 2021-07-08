@@ -113,7 +113,7 @@ let scoringAlgorithm3= {
 scoringAlgorithms=[scoringAlgorithm1, scoringAlgorithm2, scoringAlgorithm3] 
 */
  
-scoringAlgorithms=[ scoringAlgorithm1=({ name: 'Simple Score', description: 'Each letter is worth 1 point.', scoringFunction: simpleScore }), scoringAlgorithm2=({ name: 'Bonus Vowels	 ', description: 'Vowels are 3 pts, consonants are 1 pt.', scoringFunction: vowelBonusScore }), scoringAlgorithm3=({ name: 'Scrabble', description: 'The traditional scoring algorithm, Uses scrabble point system', scoringFunction: oldScrabbleScorer }) ]
+
 
 /*scoringAlgorithms=[scoringAlgorithm1 = {
     name: 'Simple Score',
@@ -189,6 +189,9 @@ let scrabbleScore=function(word)
 return score;
 }
 
+
+scoringAlgorithms=[ scoringAlgorithm1=({ name: 'Simple Score', description: 'Each letter is worth 1 point.', scoringFunction: simpleScore }), scoringAlgorithm2=({ name: 'Bonus Vowels	 ', description: 'Vowels are 3 pts, consonants are 1 pt.', scoringFunction: vowelBonusScore }), scoringAlgorithm3=({ name: 'Scrabble', description: 'The traditional scoring algorithm, Uses scrabble point system', scoringFunction: scrabbleScore }) ]
+
 function runProgram() {
    let answer=initialPrompt();
    let  algorithmNumber= scorerPrompt();
@@ -215,6 +218,8 @@ function runProgram() {
    // scrabbleScore(answer);
    
 }
+
+
 
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
