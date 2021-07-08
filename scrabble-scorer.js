@@ -51,23 +51,6 @@ function oldScrabbleScorer(word) {
 
 
 
-let scrabbleScore=function(word)
-{
-  let score=0;
-	for (let i = 0; i < word.length; i++) 
-  {
-    	  for (const pointValue in newPointStructure)
-        {
-        if (pointValue.includes(word[i]))
-        {
-          score=score+newPointStructure[pointValue];
-        }
-        }
-
-  }
-  console.log(`score of the ${word}: ${score}`);
-
-}
 
 // your job is to finish writing these functions and variables that we've named //
 // don't change the names or your program won't work as expected. //
@@ -176,6 +159,25 @@ for(j=0;j<letters.length;j++)
 
 return newOldPointStructure;
 };
+
+let scrabbleScore=function(word)
+{
+  //let newPointStructure=transform(oldPointStructure);
+  let score=0;
+	for (let i = 0; i < word.length; i++) 
+  {
+    	  for (const pointValue in newPointStructure)
+        {
+        if (pointValue.includes(word[i]))
+        {
+          score=score+newPointStructure[pointValue];
+        }
+        }
+
+  }
+  console.log(`score of the ${word}: ${score}`);
+return score;
+}
 
 
 //console.log("newPointStructure: "+newPointStructure)
