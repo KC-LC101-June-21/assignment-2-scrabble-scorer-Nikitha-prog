@@ -112,8 +112,7 @@ let scoringAlgorithm3= {
 };
 scoringAlgorithms=[scoringAlgorithm1, scoringAlgorithm2, scoringAlgorithm3] 
 */
-
-
+ 
 scoringAlgorithms=[ scoringAlgorithm1=({ name: 'Simple Score', description: 'Each letter is worth 1 point.', scoringFunction: simpleScore }), scoringAlgorithm2=({ name: 'Bonus Vowels	 ', description: 'Vowels are 3 pts, consonants are 1 pt.', scoringFunction: vowelBonusScore }), scoringAlgorithm3=({ name: 'Scrabble', description: 'The traditional scoring algorithm, Uses scrabble point system', scoringFunction: oldScrabbleScorer }) ]
 
 /*scoringAlgorithms=[scoringAlgorithm1 = {
@@ -131,10 +130,6 @@ scoringAlgorithms=[ scoringAlgorithm1=({ name: 'Simple Score', description: 'Eac
 }]*/
 
 
-
-
-
-
 function initialPrompt() {
     let word = input.question("Let's play some scrabble!\n \nEnter a word:");
     console.log();
@@ -142,11 +137,7 @@ function initialPrompt() {
     
 return word;
 };
-
   
-
-
-
 function scorerPrompt() {
 console.log("Which scoring algorithm would you like to use?");
 console.log()
@@ -182,7 +173,6 @@ return newOldPointStructure;
 
 let scrabbleScore=function(word)
 {
-  //let newPointStructure=transform(oldPointStructure);
   let score=0;
 	for (let i = 0; i < word.length; i++) 
   {
@@ -198,9 +188,6 @@ let scrabbleScore=function(word)
   console.log(`score of the ${word}: ${score}`);
 return score;
 }
-
-
-//console.log("newPointStructure: "+newPointStructure)
 
 function runProgram() {
    let answer=initialPrompt();
