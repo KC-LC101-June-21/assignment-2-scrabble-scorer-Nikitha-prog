@@ -13,7 +13,7 @@ const input = require("readline-sync");
 };*/
 
 const oldPointStructure = {
-  0: [' '],
+  //0: [' '],
   1: ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T'],
   2: ['D', 'G'],
   3: ['B', 'C', 'M', 'P'],
@@ -170,7 +170,7 @@ for(j=0;j<letters.length;j++)
   }
 //console.log("typeOF : "+typeof newOldPointStructure);
 
-//console.log("newOldPointStructure: "+newOldPointStructure);
+console.log("newOldPointStructure: "+newOldPointStructure[0]);
 return newOldPointStructure;
 };
 
@@ -231,6 +231,12 @@ return answer;
 function runProgram() {
    let answer=initialPrompt();
    scorerPrompt(answer);
+   /*console.log("scorerPrompt Num:"+num);
+   while((num>=3)||(num<0)||(num==="NaN"))
+   {
+      scorerPrompt(answer);
+   }*/
+
 }
 
 // Don't write any code below this line //
