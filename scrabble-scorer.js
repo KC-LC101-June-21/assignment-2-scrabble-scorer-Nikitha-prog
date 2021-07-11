@@ -94,17 +94,6 @@ let vowelBonusScore=function(word)
 }
 
 
-  
-/*function scorerPrompt() {
-console.log("Which scoring algorithm would you like to use?");
-console.log()
-console.log("0 - Simple: One point per character");
-console.log("1 - Vowel Bonus: Vowels are worth 3 points");
-console.log("2 - Scrabble: Uses scrabble point system");
-let answer = input.question("Enter 0, 1, or 2: ");
-
-return answer;
-}*/
 
 function transform(oldPointStructure) {
   let newOldPointStructure={};
@@ -144,7 +133,6 @@ let scrabbleScore=function(word)
 scoringAlgorithms=[ scoringAlgorithm1=({ name: 'Simple Score', description: 'Each letter is worth 1 point.', scoringFunction: simpleScore }), scoringAlgorithm2=({ name: 'Bonus Vowels	 ', description: 'Vowels are 3 pts, consonants are 1 pt.', scoringFunction: vowelBonusScore }), scoringAlgorithm3=({ name: 'Scrabble', description: 'The traditional scoring algorithm, Uses scrabble point system', scoringFunction: scrabbleScore }) ]
 
 function scorerPrompt(word) {
-  
 console.log("Which scoring algorithm would you like to use?");
 console.log()
 console.log(`0 - ${scoringAlgorithms[0].name}: ${scoringAlgorithms[0].description}`);
@@ -152,11 +140,9 @@ console.log(`1 - ${scoringAlgorithms[1].name}: ${scoringAlgorithms[1].descriptio
 console.log(`2 - ${scoringAlgorithms[2].name}: ${scoringAlgorithms[2].description}`);
 
 let answer = input.question("Enter 0, 1, or 2: ");
+
 answer=Number(answer)
-/*if((answer<0)||(answer>3)||(answer!=="Number"))
-{
-  let answer = input.question("Enter 0, 1, or 2: ");
-}*/
+
 if(answer===0)
 {
   scoringAlgorithms[0].scoringFunction(word)
@@ -172,6 +158,7 @@ if(answer===2)
     scoringAlgorithms[2].scoringFunction(word)
 
 }
+
 return answer;
 
 }
@@ -186,9 +173,12 @@ return word;
 function runProgram() {
    let answer=initialPrompt();
    scorerPrompt(answer);
-   /*console.log("scorerPrompt Num:"+num);
-   while((num>=3)||(num<0)||(num==="NaN"))
+   /*let num=scorerPrompt(answer);
+  
+   if((num>=3)||(num<=0)||(num===NaN))
    {
+     console.log();
+     console.log("Enter 0,1 or 2 ")
       scorerPrompt(answer);
    }*/
 
